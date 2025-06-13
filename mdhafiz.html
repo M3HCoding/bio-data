@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Hafiz | Senior Android Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Bio Data | Md Hafiz</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,71 +14,93 @@
         }
 
         :root {
-            --mosque-green: #1a5d1a;
-            --gold-accent: #c9b037;
+            --islamic-green: #1a5d1a;
+            --dark-green: #0d4213;
+            --gold: #c9b037;
             --light-gold: #e6d8a7;
-            --cream-bg: #f8f8f8;
-            --section-bg: #ffffff;
+            --cream: #f8f8f8;
+            --white: #ffffff;
             --text-dark: #333333;
             --text-light: #666666;
+            --section-bg: rgba(255, 255, 255, 0.85);
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--cream-bg);
+            background: linear-gradient(135deg, #f0f7f0, #e0efe0);
             color: var(--text-dark);
             line-height: 1.6;
-            background-image: 
-                linear-gradient(rgba(248, 248, 248, 0.95), rgba(248, 248, 248, 0.95)),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath fill='%231a5d1a' fill-opacity='0.05' d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z'%3E%3C/path%3E%3C/svg%3E");
             padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Islamic pattern overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle, transparent 20%, var(--islamic-green) 20%, transparent 21%),
+                radial-gradient(circle, transparent 20%, var(--islamic-green) 20%, transparent 21%),
+                var(--light-gold);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            opacity: 0.05;
+            z-index: -1;
         }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
-            background: var(--section-bg);
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            margin: 20px auto;
+            background: var(--white);
+            box-shadow: var(--card-shadow);
+            border-radius: 15px;
             overflow: hidden;
             position: relative;
+            z-index: 1;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M20,20 Q40,5 60,20 T100,20 Q85,40 100,60 T100,100 Q80,85 60,100 T20,100 Q5,80 20,60 T20,20" fill="none" stroke="%231a5d1a" stroke-width="0.5" opacity="0.1"/></svg>'), var(--white);
         }
 
-        /* Mosque Header Styles */
-        .mosque-header {
-            background: linear-gradient(135deg, #0d4213, var(--mosque-green));
+        /* Islamic pattern borders */
+        .islamic-border {
+            height: 15px;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    var(--gold),
+                    var(--gold) 10px,
+                    var(--islamic-green) 10px,
+                    var(--islamic-green) 20px
+                );
+        }
+
+        /* Header with profile picture */
+        .header {
+            background: linear-gradient(120deg, var(--dark-green), var(--islamic-green));
             color: white;
-            padding: 60px 30px 40px;
+            padding: 40px 30px;
             text-align: center;
             position: relative;
             overflow: hidden;
-            min-height: 280px;
+            min-height: 300px;
         }
 
-        .mosque-domes {
+        .header::after {
+            content: "";
             position: absolute;
-            top: 0;
+            bottom: -40px;
             left: 0;
-            width: 100%;
-            height: 100px;
-            background: 
-                radial-gradient(50px 50px at 15% 0, #fff 49%, transparent 50%),
-                radial-gradient(50px 50px at 30% 0, #fff 49%, transparent 50%),
-                radial-gradient(50px 50px at 45% 0, #fff 49%, transparent 50%),
-                radial-gradient(50px 50px at 60% 0, #fff 49%, transparent 50%),
-                radial-gradient(50px 50px at 75% 0, #fff 49%, transparent 50%),
-                radial-gradient(50px 50px at 90% 0, #fff 49%, transparent 50%);
-            opacity: 0.2;
-        }
-
-        .mosque-arch {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 40px;
-            background: 
-                radial-gradient(40px 40px at 50% 0, transparent 49%, var(--mosque-green) 50%);
+            right: 0;
+            height: 80px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="1" d="M0,160L48,154.7C96,149,192,139,288,128C384,117,480,107,576,117.3C672,128,768,160,864,165.3C960,171,1056,149,1152,149.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            z-index: 2;
         }
 
         .moon {
@@ -91,6 +113,7 @@
             border-radius: 50%;
             box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
             z-index: 2;
+            animation: glow 3s infinite alternate;
         }
 
         .moon::before {
@@ -100,14 +123,64 @@
             right: 10px;
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, #0d4213, var(--mosque-green));
+            background: linear-gradient(135deg, var(--dark-green), var(--islamic-green));
             border-radius: 50%;
+        }
+
+        .minaret {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            width: 20px;
+            height: 120px;
+            background: linear-gradient(to bottom, var(--dark-green), var(--islamic-green));
+            border-radius: 10px 10px 0 0;
+            z-index: 2;
+        }
+
+        .minaret::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: -5px;
+            width: 30px;
+            height: 30px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        .minaret.right {
+            left: auto;
+            right: 50px;
         }
 
         .header-content {
             position: relative;
             z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
             margin-top: 20px;
+        }
+
+        .profile-pic {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 5px solid var(--light-gold);
+            background: url('https://images.pexels.com/photos/12390075/pexels-photo-12390075.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load') center/cover;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .header-text {
+            max-width: 500px;
         }
 
         .name {
@@ -116,6 +189,10 @@
             margin-bottom: 5px;
             letter-spacing: 1px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            background: linear-gradient(to right, var(--light-gold), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         .title {
@@ -129,7 +206,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px;
             margin-top: 20px;
         }
 
@@ -141,9 +218,70 @@
             background: rgba(0,0,0,0.2);
             padding: 8px 15px;
             border-radius: 30px;
+            transition: all 0.3s ease;
         }
 
-        /* Main Content Styles */
+        .contact-item:hover {
+            background: rgba(0,0,0,0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Social Media Section */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 25px;
+            position: relative;
+            z-index: 4;
+        }
+
+        .social-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon i {
+            font-size: 1.8rem;
+            background: rgba(255, 255, 255, 0.2);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon span {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .social-icon:hover i {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+
+        .linkedin i { color: #0a66c2; }
+        .instagram i { 
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .facebook i { color: #1877f2; }
+
+        /* Main content layout */
         .main-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -151,24 +289,50 @@
             padding: 40px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .main-content {
                 grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .minaret, .minaret.right {
+                display: none;
             }
         }
 
         .section {
             margin-bottom: 30px;
+            padding: 25px;
+            background: var(--section-bg);
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
         .section-title {
             font-family: 'Amiri', serif;
             font-size: 1.8rem;
-            color: var(--mosque-green);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid var(--gold-accent);
+            color: var(--islamic-green);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--gold);
             position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 12px;
+            color: var(--gold);
         }
 
         .section-title::after {
@@ -178,11 +342,11 @@
             left: 0;
             width: 60px;
             height: 3px;
-            background: var(--mosque-green);
+            background: var(--islamic-green);
         }
 
-        /* Personal Info */
-        .personal-grid {
+        /* Personal info grid */
+        .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
@@ -190,131 +354,32 @@
 
         .info-item {
             margin-bottom: 12px;
+            padding: 8px 0;
+            border-bottom: 1px dashed rgba(26, 93, 26, 0.1);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
         }
 
         .info-label {
             font-weight: 600;
-            color: var(--mosque-green);
+            color: var(--islamic-green);
             display: block;
+            margin-bottom: 4px;
         }
 
-        /* Professional Experience */
-        .experience-item {
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed #e0e0e0;
+        .info-value {
+            color: var(--text-dark);
+            padding-left: 8px;
         }
 
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-
-        .company {
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: var(--mosque-green);
-        }
-
-        .role {
-            font-weight: 500;
-            color: var(--text-light);
-            margin: 5px 0;
-        }
-
-        .duration {
-            background: var(--light-gold);
-            color: var(--mosque-green);
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin: 10px 0;
-        }
-
-        .tech-item {
-            background: #e8f5e9;
-            color: var(--mosque-green);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-
-        .achievement-item {
-            margin: 10px 0;
-            display: flex;
-            gap: 10px;
-        }
-
-        .achievement-icon {
-            color: var(--gold-accent);
-            font-size: 1.2rem;
-            min-width: 25px;
-        }
-
-        /* Skills */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 15px;
-        }
-
-        .skill-category {
-            margin-bottom: 20px;
-        }
-
-        .skill-title {
-            font-weight: 600;
-            color: var(--mosque-green);
-            margin-bottom: 10px;
-        }
-
-        .skill-list {
-            list-style-type: none;
-        }
-
-        .skill-list li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .skill-list li::before {
-            content: "•";
-            color: var(--gold-accent);
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0;
-            top: -5px;
-        }
-
-        /* Projects */
-        .project-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: #f9f9f9;
-            border-left: 3px solid var(--gold-accent);
-            border-radius: 0 5px 5px 0;
-        }
-
-        .project-title {
-            font-weight: 600;
-            color: var(--mosque-green);
-            margin-bottom: 5px;
-        }
-
-        /* Family Background */
+        /* Family background */
         .family-member {
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(238, 238, 238, 0.8);
         }
 
         .family-member:last-child {
@@ -324,6 +389,7 @@
         .member-name {
             font-weight: 500;
             width: 40%;
+            color: var(--islamic-green);
         }
 
         .member-details {
@@ -332,7 +398,7 @@
             width: 60%;
         }
 
-        /* Hobbies */
+        /* Hobbies grid */
         .hobbies-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -347,29 +413,44 @@
             padding: 12px;
             background: #f0f7f0;
             border-radius: 8px;
-            border-left: 3px solid var(--mosque-green);
+            border-left: 3px solid var(--islamic-green);
+            transition: all 0.3s ease;
+        }
+
+        .hobby-item:hover {
+            background: #e0efe0;
+            transform: translateX(5px);
         }
 
         .hobby-icon {
-            color: var(--mosque-green);
+            color: var(--islamic-green);
             font-size: 1.2rem;
             min-width: 30px;
             text-align: center;
         }
 
+        /* Expectations grid */
+        .expectations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
         /* Footer */
         footer {
-            background: var(--mosque-green);
+            background: linear-gradient(to right, var(--dark-green), var(--islamic-green));
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             font-size: 1rem;
+            position: relative;
+            z-index: 2;
         }
 
         .arabic-bismillah {
             font-family: 'Amiri', serif;
             font-size: 2.5rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: var(--light-gold);
             letter-spacing: 3px;
         }
@@ -378,46 +459,36 @@
             max-width: 600px;
             margin: 0 auto;
             font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
-        /* Decorative Elements */
-        .islamic-border {
-            height: 15px;
-            background: 
-                repeating-linear-gradient(
-                    45deg,
-                    var(--gold-accent),
-                    var(--gold-accent) 10px,
-                    var(--mosque-green) 10px,
-                    var(--mosque-green) 20px
-                );
+        /* Animation */
+        @keyframes glow {
+            0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+            100% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.8); }
         }
 
-        .minaret {
-            position: absolute;
-            top: 30px;
-            left: 50px;
-            width: 20px;
-            height: 120px;
-            background: linear-gradient(to bottom, #0d4213, var(--mosque-green));
-            border-radius: 10px 10px 0 0;
-            z-index: 2;
+        /* Badge for important info */
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 8px;
         }
 
-        .minaret::before {
-            content: "";
-            position: absolute;
-            top: -15px;
-            left: -5px;
-            width: 30px;
-            height: 30px;
-            background: #c9b037;
-            border-radius: 50%;
+        .badge-green {
+            background: rgba(26, 93, 26, 0.15);
+            color: var(--islamic-green);
+            border: 1px solid rgba(26, 93, 26, 0.3);
         }
 
-        .minaret.right {
-            left: auto;
-            right: 50px;
+        .badge-gold {
+            background: rgba(201, 176, 55, 0.15);
+            color: #a08a2c;
+            border: 1px solid rgba(201, 176, 55, 0.3);
         }
     </style>
 </head>
@@ -428,31 +499,45 @@
         <div class="minaret"></div>
         <div class="minaret right"></div>
         
-        <header class="mosque-header">
-            <div class="mosque-domes"></div>
+        <header class="header">
             <div class="moon"></div>
-            <div class="mosque-arch"></div>
             
             <div class="header-content">
-                <h1 class="name">Md Hafiz</h1>
-                <div class="title">Senior Android App Developer</div>
+                <div class="profile-pic"></div>
                 
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+91 8092308016</span>
+                <div class="header-text">
+                    <h1 class="name">Md Hafiz</h1>
+                    <div class="title">Bio Data</div>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 8092308016</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>mdhafiz7215@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Noida, Uttar Pradesh</span>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>mdhafiz7215@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <span>linkedin.com/in/ermdhafiz</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Noida, Uttar Pradesh, 201301</span>
+                    
+                    <!-- Social Media Links -->
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/ermdhafiz/" target="_blank" class="social-icon linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://www.instagram.com/mdhafiz_003/" target="_blank" class="social-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/ermdhafiz" target="_blank" class="social-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -461,88 +546,159 @@
         <div class="main-content">
             <!-- Left Column -->
             <div class="left-column">
-                <!-- Personal Information -->
+                <!-- Basic Details -->
                 <section class="section">
-                    <h2 class="section-title">Personal Information</h2>
-                    <div class="personal-grid">
+                    <h2 class="section-title"><i class="fas fa-user"></i> Basic Details</h2>
+                    <div class="info-grid">
                         <div class="info-item">
                             <span class="info-label">Full Name</span>
-                            <span>Md Hafiz</span>
+                            <div class="info-value">Md Hafiz</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Father's Name</span>
+                            <div class="info-value">Md Nayeem Ansari</div>
                         </div>
                         <div class="info-item">
                             <span class="info-label">Date of Birth</span>
-                            <span>August 4, 1997</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Hometown</span>
-                            <span>Hazaribagh, Jharkhand</span>
+                            <div class="info-value">04/08/1996 (28 years)</div>
                         </div>
                         <div class="info-item">
                             <span class="info-label">Height</span>
-                            <span>171 cm (5'7.3")</span>
+                            <div class="info-value">5.71 ft / 174 cm</div>
                         </div>
                         <div class="info-item">
                             <span class="info-label">Weight</span>
-                            <span>63 kg</span>
+                            <div class="info-value">65 kg</div>
                         </div>
                         <div class="info-item">
-                            <span class="info-label">Education</span>
-                            <span>B.Tech in Computer Science & Engineering</span>
+                            <span class="info-label">Blood Group</span>
+                            <div class="info-value">A+</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Complexion</span>
+                            <div class="info-value">Fair</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Body Type</span>
+                            <div class="info-value">Athletic</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Health Status</span>
+                            <div class="info-value">Alhamdulillah Healthy</div>
                         </div>
                     </div>
                 </section>
                 
-                <!-- Skills -->
+                <!-- Contact Details -->
                 <section class="section">
-                    <h2 class="section-title">Technical Skills</h2>
-                    <div class="skills-container">
-                        <div class="skill-category">
-                            <div class="skill-title">Languages</div>
-                            <ul class="skill-list">
-                                <li>Kotlin</li>
-                                <li>Java</li>
-                                <li>C/C++</li>
-                            </ul>
+                    <h2 class="section-title"><i class="fas fa-address-book"></i> Contact Details</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Mobile Number</span>
+                            <div class="info-value">+91 8092308016</div>
                         </div>
-                        <div class="skill-category">
-                            <div class="skill-title">Frameworks</div>
-                            <ul class="skill-list">
-                                <li>Jetpack Compose</li>
-                                <li>Retrofit</li>
-                                <li>Room</li>
-                                <li>Dagger-Hilt</li>
-                                <li>Coroutines</li>
-                                <li>Navigation Graph</li>
-                            </ul>
+                        <div class="info-item">
+                            <span class="info-label">WhatsApp Number</span>
+                            <div class="info-value">+91 8092308016</div>
                         </div>
-                        <div class="skill-category">
-                            <div class="skill-title">SDKs</div>
-                            <ul class="skill-list">
-                                <li>Android SDK, NDK</li>
-                                <li>MoEngage</li>
-                                <li>CleverTap</li>
-                                <li>Razorpay</li>
-                            </ul>
+                        <div class="info-item">
+                            <span class="info-label">Email ID</span>
+                            <div class="info-value">mdhafiz7215@gmail.com</div>
                         </div>
-                        <div class="skill-category">
-                            <div class="skill-title">Firebase</div>
-                            <ul class="skill-list">
-                                <li>FCM</li>
-                                <li>Analytics</li>
-                                <li>Realtime DB</li>
-                                <li>Crashlytics</li>
-                            </ul>
+                        <div class="info-item">
+                            <span class="info-label">Current Address</span>
+                            <div class="info-value">Sector 34, Noida, UttarPradesh, 201301</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Permanent Address</span>
+                            <div class="info-value">Godhakhar Road, Pelawal, Hazaribagh, 825301, India</div>
                         </div>
                     </div>
                 </section>
                 
+                <!-- Religion & Community -->
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-mosque"></i> Religion & Community</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Religion</span>
+                            <div class="info-value">Islam</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Sect</span>
+                            <div class="info-value">Deobandi</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Caste</span>
+                            <div class="info-value">Ansari</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Namazi</span>
+                            <div class="info-value">Yes <span class="badge badge-green">Regular</span></div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Beard</span>
+                            <div class="info-value">Yes</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Halal Food</span>
+                            <div class="info-value">Always</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Education -->
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Highest Qualification</span>
+                            <div class="info-value">B.Tech Computer Science and Engineering (CSE) <span class="badge badge-gold">2017</span></div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">University</span>
+                            <div class="info-value">DR. A.P.J. Abdul Kalam Technical University, Lucknow</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Schooling</span>
+                            <div class="info-value">+2 Zila School, Hazaribagh</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Profession -->
+                <section class="section">
+                    <h2 class="section-title"><i class="fas fa-briefcase"></i> Profession</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Current Job Title</span>
+                            <div class="info-value">Sr. Software Engineer <span class="badge badge-green">Full-time</span></div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Company/Organization</span>
+                            <div class="info-value">The Indian Express</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Work Location</span>
+                            <div class="info-value">Noida, India</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Experience</span>
+                            <div class="info-value">6+ years</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="right-column">
                 <!-- Family Background -->
                 <section class="section">
-                    <h2 class="section-title">Family Background</h2>
+                    <h2 class="section-title"><i class="fas fa-users"></i> Family Background</h2>
                     <div class="family-list">
                         <div class="family-member">
-                            <div class="member-name">Late Father</div>
-                            <div class="member-details">Md Nayeem Ansari</div>
+                            <div class="member-name">Father</div>
+                            <div class="member-details">Md Nayeem Ansari (Late)</div>
                         </div>
                         <div class="family-member">
                             <div class="member-name">Mother</div>
@@ -551,12 +707,9 @@
                         <div class="family-member">
                             <div class="member-name">Brothers</div>
                             <div class="member-details">
-                                <div>1. Md Arif Hussain (B.Com, Businessman)</div>
-                                <div>Marriage with Gulshan Praveen</div>
-                                <div style="margin-top:8px">2. Md Maruph Ansari (M.A, Businessman)</div>
-                                <div>Marriage with Nikhat Praveen</div>
-                                <div style="margin-top:8px">3. Md Mistar Alam (B.A, ITI, Dubai)</div>
-                                <div>Marriage with Gulabsha Praveen</div>
+                                <div>Md Arif Hussain (B.Com, Businessman) - Married</div>
+                                <div>Md Maruph Ansari (M.A, Businessman) - Married</div>
+                                <div>Md Mistar Alam (B.A, ITI, Dubai) - Married</div>
                             </div>
                         </div>
                         <div class="family-member">
@@ -564,205 +717,112 @@
                             <div class="member-details">Ayesha Praween (B.A, Married)</div>
                         </div>
                         <div class="family-member">
-                            <div class="member-name">Brother-in-law</div>
-                            <div class="member-details">Md Majhar Ansari (Building Materials Dealer)</div>
+                            <div class="member-name">Family Status</div>
+                            <div class="member-details">Upper Middle Class</div>
+                        </div>
+                        <div class="family-member">
+                            <div class="member-name">Family Values</div>
+                            <div class="member-details">Moderate</div>
+                        </div>
+                        <div class="family-member">
+                            <div class="member-name">Native Place</div>
+                            <div class="member-details">Hazaribagh, Jharkhand</div>
+                        </div>
+                        <div class="family-member">
+                            <div class="member-name">Family Type</div>
+                            <div class="member-details">Nuclear</div>
                         </div>
                     </div>
                 </section>
                 
-                <!-- Hobbies -->
+                <!-- Lifestyle & Hobbies -->
                 <section class="section">
-                    <h2 class="section-title">Hobbies & Interests</h2>
+                    <h2 class="section-title"><i class="fas fa-heart"></i> Lifestyle & Hobbies</h2>
+                    <div class="info-item">
+                        <span class="info-label">Languages Known</span>
+                        <div class="info-value">Hindi, English, Urdu</div>
+                    </div>
                     <div class="hobbies-grid">
                         <div class="hobby-item">
-                            <i class="fas fa-camera hobby-icon"></i>
-                            <span>Photography</span>
+                            <i class="fas fa-book-quran hobby-icon"></i>
+                            <span>Reading Quran</span>
                         </div>
                         <div class="hobby-item">
-                            <i class="fas fa-futbol hobby-icon"></i>
-                            <span>Football</span>
+                            <i class="fas fa-laptop-code hobby-icon"></i>
+                            <span>Coding</span>
                         </div>
                         <div class="hobby-item">
                             <i class="fas fa-mountain hobby-icon"></i>
-                            <span>Traveling to hill stations</span>
+                            <span>Traveling</span>
                         </div>
                         <div class="hobby-item">
-                            <i class="fas fa-snowflake hobby-icon"></i>
-                            <span>Iceland & cold destinations</span>
+                            <i class="fas fa-futbol hobby-icon"></i>
+                            <span>Playing Sports</span>
                         </div>
                         <div class="hobby-item">
-                            <i class="fas fa-motorcycle hobby-icon"></i>
-                            <span>Bike riding</span>
-                        </div>
-                        <div class="hobby-item">
-                            <i class="fas fa-car hobby-icon"></i>
-                            <span>Car driving</span>
+                            <i class="fas fa-book hobby-icon"></i>
+                            <span>Reading Books</span>
                         </div>
                         <div class="hobby-item">
                             <i class="fas fa-utensils hobby-icon"></i>
                             <span>Cooking</span>
                         </div>
                     </div>
+                    <div class="info-item" style="margin-top: 15px;">
+                        <span class="info-label">Smoking/Drinking</span>
+                        <div class="info-value">No</div>
+                    </div>
                 </section>
-            </div>
-            
-            <!-- Right Column -->
-            <div class="right-column">
-                <!-- Professional Summary -->
+                
+                <!-- Expectations from Bride -->
                 <section class="section">
-                    <h2 class="section-title">Professional Summary</h2>
-                    <p>Innovative <strong>Senior Android Developer</strong> with <strong>6+ years of expertise</strong> in <strong>Kotlin</strong> and <strong>Java</strong>, specializing in <strong>Android Automotive apps</strong>, <strong>Play Store deployments</strong>, and <strong>scalable mobile solutions</strong>. Passionate about building <strong>user-centric apps</strong> that deliver seamless experiences across devices, including <strong>automotive systems</strong>.</p>
-                    
-                    <div class="highlight-list">
-                        <div class="achievement-item">
-                            <i class="fas fa-star achievement-icon"></i>
-                            <div>Expert in Kotlin and Java with deep knowledge of Android SDK, Jetpack Compose, and Navigation Graph</div>
+                    <h2 class="section-title"><i class="fas fa-hands-heart"></i> Expectations from Bride</h2>
+                    <div class="expectations-grid">
+                        <div class="info-item">
+                            <span class="info-label">Age Range</span>
+                            <div class="info-value">22-28 years</div>
                         </div>
-                        <div class="achievement-item">
-                            <i class="fas fa-star achievement-icon"></i>
-                            <div>Developed Automotive Indian Express Car App optimized for in-car entertainment systems</div>
+                        <div class="info-item">
+                            <span class="info-label">Education Preference</span>
+                            <div class="info-value">Graduate or above</div>
                         </div>
-                        <div class="achievement-item">
-                            <i class="fas fa-star achievement-icon"></i>
-                            <div>Successfully launched 10+ apps on Google Play with 1M+ collective downloads</div>
+                        <div class="info-item">
+                            <span class="info-label">Religious Views</span>
+                            <div class="info-value">Practicing Muslimah</div>
                         </div>
-                        <div class="achievement-item">
-                            <i class="fas fa-star achievement-icon"></i>
-                            <div>Proficient in MVVM, Clean Architecture, and MVI for scalable and maintainable apps</div>
+                        <div class="info-item">
+                            <span class="info-label">Job Preference</span>
+                            <div class="info-value">Working or Homemaker</div>
                         </div>
-                        <div class="achievement-item">
-                            <i class="fas fa-star achievement-icon"></i>
-                            <div>Experienced in mentoring teams, code reviews, and driving Agile projects</div>
+                        <div class="info-item">
+                            <span class="info-label">Hijab/Niqab Preference</span>
+                            <div class="info-value">Hijab preferred</div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Other Preferences</span>
+                            <div class="info-value">Good character, family-oriented</div>
                         </div>
                     </div>
                 </section>
                 
-                <!-- Professional Experience -->
+                <!-- Additional Information -->
                 <section class="section">
-                    <h2 class="section-title">Professional Experience</h2>
-                    
-                    <div class="experience-item">
-                        <div class="company">The Indian Express Pvt Ltd, Noida</div>
-                        <div class="role">Senior Android Developer</div>
-                        <div class="duration">09/2021 – Present</div>
-                        
-                        <div class="tech-stack">
-                            <div class="tech-item">Kotlin</div>
-                            <div class="tech-item">Java</div>
-                            <div class="tech-item">Jetpack Compose</div>
-                            <div class="tech-item">Dagger-Hilt</div>
-                            <div class="tech-item">Firebase</div>
-                            <div class="tech-item">Navigation Graph</div>
-                        </div>
-                        
-                        <div class="achievements">
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle achievement-icon"></i>
-                                <div>Developed the Automotive Indian Express Car App, a modular app for podcasts and shorts, optimized for in-car entertainment systems</div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle achievement-icon"></i>
-                                <div>Implemented Navigation Graph for seamless user journeys and deep linking for better engagement</div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle achievement-icon"></i>
-                                <div>Led the deployment of 5+ high-impact news apps on Google Play, reaching 1M+ downloads</div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle achievement-icon"></i>
-                                <div>Mentored a team of 4 developers, conducted code reviews, and ensured clean code principles</div>
-                            </div>
-                        </div>
+                    <h2 class="section-title"><i class="fas fa-info-circle"></i> Additional Information</h2>
+                    <div class="info-item">
+                        <span class="info-label">Deeni Activities</span>
+                        <div class="info-value">Regular Namazi, involved in community activities</div>
                     </div>
-                    
-                    <div class="experience-item">
-                        <div class="company">ZMQ Technology for Development, Delhi</div>
-                        <div class="role">Software Engineer</div>
-                        <div class="duration">01/2018 – 09/2021</div>
-                        
-                        <div class="tech-stack">
-                            <div class="tech-item">Java</div>
-                            <div class="tech-item">Kotlin</div>
-                            <div class="tech-item">Firebase</div>
-                            <div class="tech-item">REST APIs</div>
-                        </div>
-                        
-                        <div class="achievements">
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle achievement-icon"></i>
-                                <div>Designed, developed, and deployed feature-rich Android apps from scratch, impacting 500K+ users</div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle achievement-icon"></i>
-                                <div>Built dynamic form builders for real-time data collection, improving data accuracy by 30%</div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle achievement-icon"></i>
-                                <div>Resolved issues in location tracking and data synchronization, reducing crashes by 15%</div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-check-circle achievement-icon"></i>
-                                <div>Successfully launched 4+ health-tech apps on Google Play, driving real-world change in public health</div>
-                            </div>
-                        </div>
+                    <div class="info-item">
+                        <span class="info-label">Goals in Life</span>
+                        <div class="info-value">To be a pious Muslim, successful professional, and good family man</div>
                     </div>
-                </section>
-                
-                <!-- Projects -->
-                <section class="section">
-                    <h2 class="section-title">Key Projects</h2>
-                    
-                    <div class="project-item">
-                        <div class="project-title">Android Automotive Car App</div>
-                        <div>Modular app for podcasts and shorts, optimized for automotive devices</div>
-                        <div class="tech-stack" style="margin-top: 10px;">
-                            <div class="tech-item">Kotlin</div>
-                            <div class="tech-item">Navigation Graph</div>
-                            <div class="tech-item">Jetpack Compose</div>
-                            <div class="tech-item">Firebase</div>
-                        </div>
+                    <div class="info-item">
+                        <span class="info-label">Marriage Timeline</span>
+                        <div class="info-value">Ready within 3-6 months</div>
                     </div>
-                    
-                    <div class="project-item">
-                        <div class="project-title">Islamic Unity App</div>
-                        <div>Community-focused app with podcasts, educational content, and Quranic resources</div>
-                        <div class="tech-stack" style="margin-top: 10px;">
-                            <div class="tech-item">Kotlin</div>
-                            <div class="tech-item">MVVM Architecture</div>
-                            <div class="tech-item">Navigation Graph</div>
-                            <div class="tech-item">Firebase Analytics</div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-item">
-                        <div class="project-title">News Applications</div>
-                        <div>The Indian Express, Financial Express, LokSatta - 1M+ downloads collectively</div>
-                    </div>
-                    
-                    <div class="project-item">
-                        <div class="project-title">Health-Tech Apps</div>
-                        <div>Vishwaas Toolkit, TB StoryTeller - Driving change in public health</div>
-                    </div>
-                </section>
-                
-                <!-- Awards -->
-                <section class="section">
-                    <h2 class="section-title">Awards & Achievements</h2>
-                    <div class="awards">
-                        <div class="achievement-item">
-                            <i class="fas fa-trophy achievement-icon"></i>
-                            <div>
-                                <strong>IE Hack 2023 Winner</strong>
-                                <div>Improved app notification CTR by 30%</div>
-                            </div>
-                        </div>
-                        <div class="achievement-item">
-                            <i class="fas fa-trophy achievement-icon"></i>
-                            <div>
-                                <strong>Employee of the Year 2020</strong>
-                                <div>ZMQ Technology for exceptional performance and leadership</div>
-                            </div>
-                        </div>
+                    <div class="info-item">
+                        <span class="info-label">Financial Status</span>
+                        <div class="info-value">Stable income, owns property</div>
                     </div>
                 </section>
             </div>
@@ -772,7 +832,7 @@
         
         <footer>
             <div class="arabic-bismillah">﷽</div>
-            <div class="quote">"Seeking knowledge is an obligation upon every Muslim." - Prophet Muhammad (PBUH)</div>
+            <div class="quote">"And one of His signs is that He created for you spouses from among yourselves so that you may find comfort in them. And He has placed between you compassion and mercy." - Quran (30:21)</div>
         </footer>
     </div>
 </body>
